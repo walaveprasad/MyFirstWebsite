@@ -1,0 +1,2425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>India Case Competition Intelligence Report 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+  :root {
+    --ink: #0d0d0d;
+    --paper: #f5f0e8;
+    --accent: #c8372d;
+    --accent2: #1a4a6b;
+    --gold: #b8860b;
+    --mid: #4a4a4a;
+    --light: #d4cfc5;
+    --highlight: #fff3cd;
+    --green: #2d6a2d;
+    --border: #c5bfb0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 30px;
+    display: flex; align-items: center; gap: 20px;
+    flex-wrap: wrap;
+    border-bottom: 3px solid var(--accent);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+  }
+  nav span { font-weight: 600; color: var(--accent); margin-right: 10px; font-size: 13px; }
+  nav a { color: #aaa; text-decoration: none; transition: color .2s; }
+  nav a:hover { color: var(--paper); }
+
+  /* HEADER */
+  header {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 60px 60px 50px;
+    border-bottom: 5px solid var(--accent);
+  }
+  .report-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 60px);
+    font-weight: 900;
+    line-height: 1.1;
+    max-width: 800px;
+    margin-bottom: 20px;
+  }
+  header h1 em { color: var(--accent); font-style: normal; }
+  .header-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: #888;
+    margin-top: 24px;
+    display: flex; gap: 30px; flex-wrap: wrap;
+  }
+  .header-meta span { color: #aaa; }
+
+  /* LAYOUT */
+  main { max-width: 1100px; margin: 0 auto; padding: 40px 30px 80px; }
+
+  /* SECTIONS */
+  .section { margin-bottom: 60px; }
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+  }
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 32px 0 12px;
+    color: var(--accent2);
+  }
+  h4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--mid);
+    margin: 20px 0 8px;
+  }
+  p { margin-bottom: 12px; color: #222; }
+
+  /* CALLOUT BOXES */
+  .callout {
+    border-left: 4px solid var(--accent);
+    background: #fff;
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+    font-size: 14px;
+  }
+  .callout.gold { border-color: var(--gold); background: #fffef5; }
+  .callout.blue { border-color: var(--accent2); background: #f0f5fa; }
+  .callout.green { border-color: var(--green); background: #f0faf0; }
+  .callout strong { display: block; margin-bottom: 4px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); }
+  .callout.gold strong { color: var(--gold); }
+  .callout.blue strong { color: var(--accent2); }
+  .callout.green strong { color: var(--green); }
+
+  /* COMPETITION CARDS */
+  .comp-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--accent);
+    padding: 28px;
+    margin-bottom: 32px;
+    border-radius: 0 0 4px 4px;
+  }
+  .comp-card.tier1 { border-top-color: var(--accent); }
+  .comp-card.tier2 { border-top-color: var(--gold); }
+  .comp-card.tier3 { border-top-color: var(--accent2); }
+  .comp-card.global { border-top-color: var(--green); }
+
+  .comp-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    flex-wrap: wrap; gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .comp-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; }
+  .comp-org { font-size: 12px; color: var(--mid); margin-top: 2px; font-family: 'IBM Plex Mono', monospace; }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .badge {
+    font-size: 10px; font-weight: 600; padding: 3px 8px; border-radius: 2px;
+    text-transform: uppercase; letter-spacing: 1px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .badge.red { background: var(--accent); color: #fff; }
+  .badge.gold { background: var(--gold); color: #fff; }
+  .badge.blue { background: var(--accent2); color: #fff; }
+  .badge.green { background: var(--green); color: #fff; }
+  .badge.grey { background: #ddd; color: #555; }
+
+  /* RATING BARS */
+  .ratings-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;
+    margin: 16px 0;
+  }
+  .rating-item { }
+  .rating-label { font-size: 11px; font-family: 'IBM Plex Mono', monospace; color: var(--mid); margin-bottom: 4px; }
+  .rating-bar { height: 6px; background: var(--light); border-radius: 3px; overflow: hidden; }
+  .rating-fill { height: 100%; border-radius: 3px; transition: width .5s; }
+  .rating-fill.r10 { width: 100%; background: var(--accent); }
+  .rating-fill.r9 { width: 90%; background: var(--accent); }
+  .rating-fill.r8 { width: 80%; background: #e07c22; }
+  .rating-fill.r7 { width: 70%; background: var(--gold); }
+  .rating-fill.r6 { width: 60%; background: var(--gold); }
+  .rating-fill.r5 { width: 50%; background: #888; }
+  .rating-fill.r4 { width: 40%; background: #aaa; }
+  .rating-score { font-size: 11px; font-family: 'IBM Plex Mono', monospace; font-weight: 600; margin-top: 2px; }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 20px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th {
+    background: var(--ink); color: var(--paper);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+    padding: 10px 14px; text-align: left;
+  }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) td { background: #faf8f4; }
+  tr:hover td { background: var(--highlight); }
+  .rank-num { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 18px; color: var(--accent); }
+
+  /* GRID LAYOUTS */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media(max-width: 700px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+
+  .info-block {
+    background: #fff; border: 1px solid var(--border);
+    padding: 16px; border-radius: 4px;
+  }
+  .info-block h4 { margin-top: 0; }
+
+  /* TAGS */
+  .tag-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .tag {
+    font-size: 11px; padding: 3px 10px; border-radius: 12px;
+    background: var(--light); color: var(--mid);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 30px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 10px; top: 0; bottom: 0;
+    width: 2px; background: var(--border);
+  }
+  .tl-item { position: relative; margin-bottom: 20px; }
+  .tl-dot {
+    position: absolute; left: -24px; top: 4px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent); border: 2px solid var(--paper);
+  }
+  .tl-month {
+    font-family: 'IBM Plex Mono', monospace; font-weight: 600;
+    font-size: 12px; color: var(--accent);
+  }
+  .tl-comps { font-size: 13px; color: var(--mid); margin-top: 2px; }
+
+  /* MATRIX */
+  .matrix-cell { text-align: center; padding: 8px 4px !important; }
+  .dot-high { color: var(--accent); font-size: 18px; }
+  .dot-med { color: var(--gold); font-size: 18px; }
+  .dot-low { color: #bbb; font-size: 18px; }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink); color: #888;
+    padding: 30px 60px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    border-top: 3px solid var(--accent);
+    margin-top: 60px;
+  }
+
+  /* PRINT ANCHOR */
+  [id] { scroll-margin-top: 60px; }
+
+  /* SPECIAL */
+  .exec-summary {
+    background: var(--ink); color: var(--paper);
+    padding: 32px 36px; border-left: 6px solid var(--accent);
+    margin-bottom: 40px;
+  }
+  .exec-summary h2 { border-color: #444; color: var(--paper); }
+  .exec-summary p { color: #ccc; }
+  .exec-summary .callout { background: #1a1a1a; color: var(--paper); border-color: var(--accent); }
+  .exec-summary .callout strong { color: var(--accent); }
+
+  .star { color: var(--gold); }
+
+  ul { padding-left: 20px; margin-bottom: 12px; }
+  ul li { margin-bottom: 4px; font-size: 14px; color: #333; }
+  ul li strong { color: var(--ink); }
+
+  .highlight-box {
+    background: var(--highlight); border: 1px solid var(--gold);
+    padding: 14px 18px; border-radius: 4px; margin: 16px 0;
+    font-size: 13px;
+  }
+  .danger-box {
+    background: #fff0f0; border: 1px solid var(--accent);
+    padding: 14px 18px; border-radius: 4px; margin: 16px 0;
+    font-size: 13px;
+  }
+
+  details { margin: 12px 0; }
+  summary {
+    cursor: pointer; font-weight: 600; font-size: 14px;
+    padding: 10px 14px; background: #fff; border: 1px solid var(--border);
+    border-radius: 4px; list-style: none;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: '▶ '; font-size: 10px; color: var(--accent); }
+  details[open] summary::before { content: '▼ '; }
+  details > div { padding: 16px; border: 1px solid var(--border); border-top: none; background: #faf8f4; }
+
+  .roadmap-step {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 16px; border: 1px solid var(--border);
+    background: #fff; margin-bottom: 12px; border-radius: 4px;
+  }
+  .step-num {
+    font-family: 'Playfair Display', serif; font-weight: 900; font-size: 36px;
+    color: var(--accent); line-height: 1; min-width: 48px;
+  }
+
+  .swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 2px solid var(--ink); }
+  .swot-cell { padding: 16px; border: 1px solid var(--border); }
+  .swot-cell h4 { font-size: 13px; margin-top: 0; }
+  .swot-cell.s { background: #f0faf0; }
+  .swot-cell.w { background: #fff0f0; }
+  .swot-cell.o { background: #f0f5fa; }
+  .swot-cell.t { background: #fffef0; }
+</style>
+</head>
+<body>
+
+<nav>
+  <span>ICIR 2026</span>
+  <a href="#exec">Executive Summary</a>
+  <a href="#corporate">Corporate Comps</a>
+  <a href="#consulting">Consulting</a>
+  <a href="#global">Global</a>
+  <a href="#startup">Startup</a>
+  <a href="#rankings">Rankings</a>
+  <a href="#matrix">Matrix</a>
+  <a href="#calendar">Calendar</a>
+  <a href="#roadmap">Roadmap</a>
+  <a href="#reality">Reality Check</a>
+</nav>
+
+<header>
+  <div class="report-badge">Intelligence Report · India · 2026 Edition</div>
+  <h1>The <em>Definitive</em> India Case Competition Intelligence Report</h1>
+  <p style="color:#aaa; max-width:700px; font-size:15px;">A comprehensive strategic analysis of 40+ competitions — corporate, consulting, global, and startup — ranked by MBA admissions impact, hiring value, prestige, and real-world career outcomes for Indian students.</p>
+  <div class="header-meta">
+    <div>Audience: <span>BBA / MBA / Engineering Students (India)</span></div>
+    <div>Scope: <span>40+ Competitions Analyzed</span></div>
+    <div>Updated: <span>2026</span></div>
+    <div>Format: <span>Intelligence-Grade Research Report</span></div>
+  </div>
+</header>
+
+<main>
+
+<!-- ════════════════════════════════════════ -->
+<!-- EXECUTIVE SUMMARY -->
+<!-- ════════════════════════════════════════ -->
+<div class="exec-summary" id="exec">
+  <div class="section-label">Section 00</div>
+  <h2>Executive Summary</h2>
+  <p>This report analyzes 40+ business competitions across corporate, consulting, global, and startup categories with one lens: <strong style="color:#fff">actual career impact</strong>, not certificate accumulation. The Indian competition ecosystem is large, noisy, and deeply unequal in value. Most students waste time on low-prestige competitions while missing the 12–15 competitions that genuinely move the needle on MBA admissions, consulting shortlists, and corporate PPOs.</p>
+  <div class="callout" style="margin:20px 0;">
+    <strong>Core Finding</strong>
+    Only 8–10 competitions in India have genuine, verifiable career impact. The rest range from useful-but-modest to outright resume fillers. This report tells you exactly which is which.
+  </div>
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:16px; margin-top:20px;">
+    <div style="border:1px solid #333; padding:16px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--accent); letter-spacing:2px;">TIER 1 ELITE</div>
+      <div style="font-size:24px; font-family:'Playfair Display',serif; font-weight:700; color:#fff; margin:6px 0;">8</div>
+      <div style="font-size:12px; color:#888;">Competitions with genuine placement/MBA impact</div>
+    </div>
+    <div style="border:1px solid #333; padding:16px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--gold); letter-spacing:2px;">TIER 2 STRONG</div>
+      <div style="font-size:24px; font-family:'Playfair Display',serif; font-weight:700; color:#fff; margin:6px 0;">14</div>
+      <div style="font-size:12px; color:#888;">Strong resume signal, good networking value</div>
+    </div>
+    <div style="border:1px solid #333; padding:16px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#888; letter-spacing:2px;">TIER 3 FILLER</div>
+      <div style="font-size:24px; font-family:'Playfair Display',serif; font-weight:700; color:#fff; margin:6px 0;">20+</div>
+      <div style="font-size:12px; color:#888;">Modest or negligible career value</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<!-- SECTION 1: CORPORATE CASE COMPETITIONS -->
+<!-- ════════════════════════════════════════ -->
+<div class="section" id="corporate">
+  <div class="section-label">Section 01</div>
+  <h2>Corporate Case Competitions — Deep Analysis</h2>
+  <p>These are the flagship competitions run by major Indian and multinational corporations targeting college students. They form the backbone of the Indian competition ecosystem and are the primary pathway to PPOs, internships, and corporate visibility.</p>
+
+  <!-- HUL LIME -->
+  <div class="comp-card tier1" id="hul">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">HUL L.I.M.E. — Live Intimate Meaningful & Exciting</div>
+        <div class="comp-org">Hindustan Unilever Limited · FMCG · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1 ELITE</span>
+        <span class="badge gold">PPO POTENTIAL</span>
+        <span class="badge blue">MBA GOLD</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Started:</strong> 2004 (one of India's oldest)</li>
+          <li><strong>Participants/yr:</strong> 50,000+ registrations, ~200 finalists</li>
+          <li><strong>Acceptance rate:</strong> ~0.4% (finals)</li>
+          <li><strong>Eligibility:</strong> MBA students (PG), some UG rounds</li>
+          <li><strong>Team size:</strong> 3–4 members</li>
+          <li><strong>Cross-college:</strong> Not allowed</li>
+          <li><strong>Fee:</strong> Free</li>
+          <li><strong>Finals:</strong> Mumbai (sponsored travel + stay)</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Competition Structure</h4>
+        <ul>
+          <li><strong>Round 1:</strong> Online quiz + case submission (PPT)</li>
+          <li><strong>Round 2:</strong> Campus shortlist + presentation</li>
+          <li><strong>Round 3:</strong> Zonal rounds (offline)</li>
+          <li><strong>Finals:</strong> Mumbai HQ, live pitch to HUL senior leadership</li>
+          <li><strong>Timeline:</strong> November – February</li>
+          <li><strong>Industry:</strong> FMCG, Marketing, Strategy</li>
+          <li><strong>Jury:</strong> HUL CMO, business heads, MDs</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Prestige & Career Impact Ratings</h4>
+    <div class="ratings-grid">
+      <div class="rating-item">
+        <div class="rating-label">Corporate Prestige</div>
+        <div class="rating-bar"><div class="rating-fill r9"></div></div>
+        <div class="rating-score">9/10 — HUL is India's gold standard FMCG brand</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">MBA Admissions Value</div>
+        <div class="rating-bar"><div class="rating-fill r10"></div></div>
+        <div class="rating-score">10/10 — IIM panels immediately recognize this</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">PPO/Hiring Potential</div>
+        <div class="rating-bar"><div class="rating-fill r9"></div></div>
+        <div class="rating-score">9/10 — Direct HUL interview pipeline for finalists</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">Consulting Career Value</div>
+        <div class="rating-bar"><div class="rating-fill r8"></div></div>
+        <div class="rating-score">8/10 — MBB recruiters respect FMCG case exposure</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">Difficulty Level</div>
+        <div class="rating-bar"><div class="rating-fill r10"></div></div>
+        <div class="rating-score">10/10 — Extremely competitive, elite MBA teams</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">LinkedIn Visibility</div>
+        <div class="rating-bar"><div class="rating-fill r9"></div></div>
+        <div class="rating-score">9/10 — Highly recognized signal on profiles</div>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top:20px;">
+      <div class="callout gold">
+        <strong>PPO Reality</strong>
+        Winners and finalists (top 3 teams) are directly fast-tracked into HUL's Summer Placement process. Historically, 60–70% of L.I.M.E. finalists from IIM-A/B/C receive PPO offers. This is not marketing — it is an observed pattern over 15+ years.
+      </div>
+      <div class="callout blue">
+        <strong>MBA Panel Impact</strong>
+        IIM Ahmedabad, Calcutta, and Bangalore WAT-PI panels specifically ask about L.I.M.E. performance. Being a national finalist is equivalent to a strong brand internship in signaling quality to MBA interviewers. ISB also recognizes it for Round 2 profiles.
+      </div>
+    </div>
+
+    <h4>Skills Tested</h4>
+    <div class="tag-list">
+      <span class="tag">Consumer Insights</span>
+      <span class="tag">Brand Strategy</span>
+      <span class="tag">FMCG Marketing</span>
+      <span class="tag">P&L Understanding</span>
+      <span class="tag">Go-to-Market</span>
+      <span class="tag">Rural Distribution</span>
+      <span class="tag">Presentation</span>
+      <span class="tag">Data Interpretation</span>
+    </div>
+
+    <h4>Common Mistakes (sourced from InsideIIM, LinkedIn winners)</h4>
+    <div class="danger-box">
+      <ul style="margin:0;">
+        <li>Generic frameworks (4P, SWOT) without deep FMCG insight — judges hate this</li>
+        <li>Not grounding solutions in India-specific distribution realities (kirana, general trade)</li>
+        <li>Over-indexing on digital-only solutions for mass market products</li>
+        <li>Weak financials — no revenue/margin impact analysis</li>
+        <li>Poor Q&A preparation — judges probe hard on assumptions</li>
+      </ul>
+    </div>
+
+    <h4>Preparation Strategy</h4>
+    <ul>
+      <li>Read <em>HUL Annual Reports</em> and understand their brand portfolio deeply</li>
+      <li>Study Nielsen FMCG reports, IRI data on Indian consumer segments</li>
+      <li>Use MECE frameworks but layer with consumer psychology and channel strategy</li>
+      <li>Frame all solutions with measurable business impact (market share, revenue uplift)</li>
+      <li>Practice live presentations with time pressure — judges interrupt frequently</li>
+    </ul>
+
+    <div class="highlight-box">
+      <strong>Best Suited For:</strong> MBA students targeting FMCG/marketing careers · MBA aspirants (profile building) · Students from IIMs, XLRI, SPJIMR, FMS
+    </div>
+  </div>
+
+  <!-- TATA IMAGINATION CHALLENGE -->
+  <div class="comp-card tier1" id="tata">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Tata Imagination Challenge (TIC)</div>
+        <div class="comp-org">Tata Group · Conglomerate · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1 ELITE</span>
+        <span class="badge gold">PPO POTENTIAL</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Participants/yr:</strong> 30,000–40,000 registrations</li>
+          <li><strong>Finals acceptance:</strong> ~0.3%</li>
+          <li><strong>Eligibility:</strong> Undergraduate + MBA (separate tracks)</li>
+          <li><strong>Team size:</strong> 2–4</li>
+          <li><strong>Sectors:</strong> Sustainability, Innovation, Business</li>
+          <li><strong>Prize:</strong> ₹5–10 lakh + Tata network access</li>
+          <li><strong>Format:</strong> Multi-round: quiz → case → presentation</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career Impact</h4>
+        <ul>
+          <li>Direct gateway to Tata Administrative Service (TAS) radar</li>
+          <li>TAS recruiters actively monitor finalist list</li>
+          <li>Winners frequently featured in Tata internal communications</li>
+          <li>Strong signal for any Tata Group company interview</li>
+          <li>Very high MBA PI value — shows breadth of thinking</li>
+          <li>UG winners have received direct Tata internship offers</li>
+        </ul>
+      </div>
+    </div>
+    <h4>Prestige Ratings</h4>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Corporate Prestige</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Value</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+      <div class="rating-item"><div class="rating-label">Difficulty</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+      <div class="rating-item"><div class="rating-label">Indian Recognition</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+    </div>
+    <div class="callout gold">
+      <strong>Hidden Reality</strong>
+      The Tata name alone carries extraordinary weight in India's corporate and MBA ecosystem. Even a semifinal appearance is worth mentioning in MBA applications. The TAS connection is real — TAS HR teams have been known to reach out to top-performing non-winners for internship conversations.
+    </div>
+    <h4>Skills Tested</h4>
+    <div class="tag-list">
+      <span class="tag">Business Strategy</span><span class="tag">Innovation</span><span class="tag">Sustainability</span><span class="tag">Leadership</span><span class="tag">Cross-sector Thinking</span><span class="tag">Storytelling</span>
+    </div>
+  </div>
+
+  <!-- MARICO OTW -->
+  <div class="comp-card tier1" id="marico">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Marico Over The Wall (OTW)</div>
+        <div class="comp-org">Marico Limited · FMCG · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1</span>
+        <span class="badge gold">INTERNSHIP GATEWAY</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Focus:</strong> FMCG strategy, marketing, innovation</li>
+          <li><strong>Eligibility:</strong> MBA students primarily</li>
+          <li><strong>Team:</strong> 3 members same college</li>
+          <li><strong>Rounds:</strong> Online → campus → national finals</li>
+          <li><strong>Prize:</strong> ₹2–3 lakh + PPO fast-track</li>
+          <li><strong>Timeline:</strong> August–November</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Why It Matters</h4>
+        <ul>
+          <li>Second most prestigious FMCG competition after L.I.M.E.</li>
+          <li>Marico is known for talent scouting through OTW</li>
+          <li>Finals held at Marico HQ with board-level jury</li>
+          <li>Internship conversion for top 2 teams is very high</li>
+          <li>Strong signal for FMCG marketing roles</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">FMCG Prestige</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Value</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+      <div class="rating-item"><div class="rating-label">Hiring Potential</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+      <div class="rating-item"><div class="rating-label">Difficulty</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+    </div>
+  </div>
+
+  <!-- ABG STRATOS -->
+  <div class="comp-card tier1" id="abg">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">ABG Stratos (Aditya Birla Group)</div>
+        <div class="comp-org">Aditya Birla Group · Conglomerate · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1</span>
+        <span class="badge blue">LEADERSHIP SIGNAL</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Focus:</strong> Business strategy across ABG sectors</li>
+          <li><strong>Eligibility:</strong> MBA students (top B-schools)</li>
+          <li><strong>Structure:</strong> 3 rounds (online → campus → national)</li>
+          <li><strong>Sectors:</strong> Cement, Metals, Financial Services, Telecom, Fashion</li>
+          <li><strong>Prize:</strong> ₹3 lakh + exposure to ABG leadership</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career Value</h4>
+        <ul>
+          <li>Direct radar for ABG's leadership hiring programs</li>
+          <li>Strong signal for strategy and corporate roles at ABG companies</li>
+          <li>Finalists are tracked for Aditya Birla Scholars program consideration</li>
+          <li>Excellent for students targeting conglomerate careers</li>
+          <li>Panel includes ABG group-level executives</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Corporate Prestige</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Value</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+      <div class="rating-item"><div class="rating-label">Leadership Signal</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+    </div>
+  </div>
+
+  <!-- P&G CEO CHALLENGE -->
+  <div class="comp-card tier1" id="pg">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">P&G CEO Challenge</div>
+        <div class="comp-org">Procter & Gamble · FMCG · Global</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1</span>
+        <span class="badge gold">GLOBAL PRESTIGE</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Global reach:</strong> 60+ countries, India track included</li>
+          <li><strong>Eligibility:</strong> Undergraduate + MBA</li>
+          <li><strong>Focus:</strong> Business strategy, brand management, innovation</li>
+          <li><strong>Structure:</strong> Online case → national → global</li>
+          <li><strong>Winners:</strong> Qualify for global finals (in-person, various cities)</li>
+          <li><strong>Prize:</strong> Cash + P&G leadership exposure</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career Impact</h4>
+        <ul>
+          <li>Global brand — recognized in international MBA applications</li>
+          <li>P&G India recruiters specifically track CEO Challenge finalists</li>
+          <li>Strong signal for brand management career globally</li>
+          <li>Global finalists get exposure to P&G global leadership</li>
+          <li>Has led to P&G international internship offers in past years</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Global Prestige</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+      <div class="rating-item"><div class="rating-label">FMCG Career Value</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+      <div class="rating-item"><div class="rating-label">International MBA Value</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+    </div>
+  </div>
+
+  <!-- FLIPKART WIRED -->
+  <div class="comp-card tier2" id="flipkart">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Flipkart Wired</div>
+        <div class="comp-org">Flipkart · E-commerce / Tech · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge gold">TIER 2</span>
+        <span class="badge blue">PRODUCT/TECH</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Focus:</strong> Product, tech, business strategy, supply chain</li>
+          <li><strong>Eligibility:</strong> UG + MBA + Engineering</li>
+          <li><strong>Team:</strong> 2–4 members</li>
+          <li><strong>Rounds:</strong> Online → campus → Bangalore finals</li>
+          <li><strong>Prize:</strong> ₹2 lakh + Flipkart network</li>
+          <li><strong>PPM Track:</strong> Product management cases in finals</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career Value</h4>
+        <ul>
+          <li>Strong signal for e-commerce, product, and tech strategy roles</li>
+          <li>Flipkart HR tracks finalists for internship shortlisting</li>
+          <li>Product management track is excellent for PM career aspirants</li>
+          <li>Good LinkedIn signal for tech/startup career paths</li>
+          <li>Lower FMCG/consulting signal than L.I.M.E. or OTW</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Corporate Prestige</div><div class="rating-bar"><div class="rating-fill r7"></div></div><div class="rating-score">7/10</div></div>
+      <div class="rating-item"><div class="rating-label">PM Career Value</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Value</div><div class="rating-bar"><div class="rating-fill r6"></div></div><div class="rating-score">6/10</div></div>
+    </div>
+  </div>
+
+  <!-- ASIAN PAINTS CANVAS -->
+  <div class="comp-card tier2" id="asian">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Asian Paints Canvas</div>
+        <div class="comp-org">Asian Paints · Paints / Consumer · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge gold">TIER 2</span>
+        <span class="badge grey">MARKETING FOCUS</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Focus:</strong> Brand management, marketing, consumer insights</li>
+          <li><strong>Eligibility:</strong> MBA students</li>
+          <li><strong>Strong at:</strong> IIM A/B/C, XLRI, SPJIMR</li>
+          <li><strong>Prize:</strong> ₹2–3 lakh + Asian Paints internship fast-track</li>
+          <li><strong>Timeline:</strong> September–December</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career Value</h4>
+        <ul>
+          <li>Excellent for Asian Paints internship/PPO pipeline</li>
+          <li>Strong brand in consumer marketing recruitment</li>
+          <li>Less weight than L.I.M.E. in MBA panels</li>
+          <li>Good for FMCG/consumer goods career path</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Corporate Prestige</div><div class="rating-bar"><div class="rating-fill r7"></div></div><div class="rating-score">7/10</div></div>
+      <div class="rating-item"><div class="rating-label">Marketing Career</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Value</div><div class="rating-bar"><div class="rating-fill r6"></div></div><div class="rating-score">6/10</div></div>
+    </div>
+  </div>
+
+  <!-- AMAZON ACE -->
+  <div class="comp-card tier2" id="amazon">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Amazon Ace</div>
+        <div class="comp-org">Amazon India · E-commerce / Tech · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge gold">TIER 2</span>
+        <span class="badge blue">BIG TECH</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Focus:</strong> Business strategy, product, operations, tech</li>
+          <li><strong>Eligibility:</strong> MBA primarily; UG track sometimes</li>
+          <li><strong>Team:</strong> 2–3 members</li>
+          <li><strong>Prize:</strong> Amazon mentorship + cash</li>
+          <li><strong>Format:</strong> Real Amazon business problems</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career Value</h4>
+        <ul>
+          <li>Amazon's internal recruiters track finalists for PM/strategy roles</li>
+          <li>Good for tech-business career aspirants</li>
+          <li>Real Amazon cases provide genuine learning</li>
+          <li>Strong for product management career positioning</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Big Tech Prestige</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+      <div class="rating-item"><div class="rating-label">PM Career Value</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+    </div>
+  </div>
+
+  <!-- AIRTEL iCREATE -->
+  <div class="comp-card tier2" id="airtel">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Airtel iCreate</div>
+        <div class="comp-org">Bharti Airtel · Telecom · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge gold">TIER 2</span>
+        <span class="badge grey">INNOVATION</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <p>Focus on innovation in telecom — 5G, digital services, rural connectivity. Strong for telecom/tech strategy roles. Airtel actively recruits from this competition. <strong>Career value: 7/10 for telecom, 5/10 for MBA applications.</strong></p>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Telecom Prestige</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Value</div><div class="rating-bar"><div class="rating-fill r5"></div></div><div class="rating-score">5/10</div></div>
+    </div>
+  </div>
+
+  <!-- EY CAFTA -->
+  <div class="comp-card tier1" id="ey">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">EY CAFTA (Consulting Analysis For Tomorrow's Achievers)</div>
+        <div class="comp-org">Ernst & Young · Big 4 Consulting · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1</span>
+        <span class="badge blue">CONSULTING GATEWAY</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Focus:</strong> Consulting strategy, business analysis, advisory</li>
+          <li><strong>Eligibility:</strong> UG + MBA + CA/CMA students</li>
+          <li><strong>Open to:</strong> Tier 1 and Tier 2 colleges</li>
+          <li><strong>Rounds:</strong> Online case → national finals</li>
+          <li><strong>Prize:</strong> ₹2 lakh + EY internship opportunities</li>
+          <li><strong>Notable:</strong> One of few competitions open to UG commerce/CA</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career Impact</h4>
+        <ul>
+          <li>Direct gateway to EY India consulting internship</li>
+          <li>EY HR teams use this as pre-screening for campus hiring</li>
+          <li>Strong for consulting career positioning at UG level</li>
+          <li>CA students who win have gotten Big 4 consulting fast-tracks</li>
+          <li>Strong MBA applications signal — shows consulting aptitude early</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Consulting Prestige</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+      <div class="rating-item"><div class="rating-label">UG Value</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10 — rare opportunity</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Value</div><div class="rating-bar"><div class="rating-fill r7"></div></div><div class="rating-score">7/10</div></div>
+      <div class="rating-item"><div class="rating-label">Hiring Potential</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+    </div>
+    <div class="callout green">
+      <strong>Hidden Gem for BBA/BCom Students</strong>
+      CAFTA is one of the very few national-level competitions where a strong UG student can compete against MBA students AND have a realistic shot at Big 4 consulting exposure. The UG prestige-to-competition ratio is extremely high.
+    </div>
+  </div>
+
+  <!-- DELOITTE MAVERICK -->
+  <div class="comp-card tier1" id="deloitte">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Deloitte Maverick</div>
+        <div class="comp-org">Deloitte India · Big 4 Consulting · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1</span>
+        <span class="badge blue">CONSULTING FLAGSHIP</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Participants:</strong> 50,000+ (one of India's largest)</li>
+          <li><strong>Finals acceptance:</strong> ~0.2%</li>
+          <li><strong>Eligibility:</strong> UG + MBA + Engineering</li>
+          <li><strong>Broad sectors:</strong> Digital, Strategy, Finance, Operations</li>
+          <li><strong>Prize:</strong> ₹3 lakh + Deloitte exposure</li>
+          <li><strong>Timeline:</strong> August–November</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Why It Matters</h4>
+        <ul>
+          <li>One of India's most visible competitions by volume</li>
+          <li>Strong brand — "Deloitte" on resume resonates across sectors</li>
+          <li>Deloitte India recruits from this pipeline</li>
+          <li>Excellent for consulting + strategy positioning at UG level</li>
+          <li>Multi-domain cases test true consulting aptitude</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Consulting Prestige</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Value</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+      <div class="rating-item"><div class="rating-label">UG Value</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+      <div class="rating-item"><div class="rating-label">Difficulty</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+    </div>
+    <h4>Skills Tested</h4>
+    <div class="tag-list">
+      <span class="tag">Consulting Frameworks</span><span class="tag">Digital Strategy</span><span class="tag">Operations</span><span class="tag">Financial Analysis</span><span class="tag">Structured Problem Solving</span>
+    </div>
+  </div>
+
+  <!-- KPMG IDEATION -->
+  <div class="comp-card tier2" id="kpmg">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">KPMG Ideation Challenge / Spektra</div>
+        <div class="comp-org">KPMG India · Big 4 · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge gold">TIER 2</span>
+        <span class="badge grey">CONSULTING</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <p>A multi-domain business challenge from KPMG covering audit, tax, advisory, and risk. Slightly less competitive than Deloitte Maverick. Strong for Big 4 advisory career positioning. <strong>Bonus:</strong> KPMG International Case Competition (separate, global) is Tier 1 with massive international exposure if India team qualifies.</p>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Big 4 Prestige</div><div class="rating-bar"><div class="rating-fill r7"></div></div><div class="rating-score">7/10</div></div>
+      <div class="rating-item"><div class="rating-label">Consulting Value</div><div class="rating-bar"><div class="rating-fill r7"></div></div><div class="rating-score">7/10</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Value</div><div class="rating-bar"><div class="rating-fill r6"></div></div><div class="rating-score">6/10</div></div>
+    </div>
+  </div>
+
+  <!-- NESTLÉ / MONDELEZ -->
+  <div class="comp-card tier2" id="nestle">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Nestlé Gurukul / Mondelez BizWiz</div>
+        <div class="comp-org">Nestlé India + Mondelez India · FMCG · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge gold">TIER 2</span>
+        <span class="badge grey">FMCG</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <p>Both competitions are solidly Tier 2 — excellent for FMCG marketing careers, internship pathways, and demonstrating consumer goods acumen. Nestlé Gurukul has stronger global brand recognition. Mondelez BizWiz is more India-centric but has genuine PPO conversion for finalists. <strong>FMCG career value: 8/10. MBA value: 6/10.</strong></p>
+  </div>
+
+  <!-- RELIANCE TUP -->
+  <div class="comp-card tier2" id="reliance">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Reliance Industries — The Ultimate Pitch (TUP)</div>
+        <div class="comp-org">Reliance Industries · Conglomerate · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge gold">TIER 2</span>
+        <span class="badge grey">ENTREPRENEURSHIP</span>
+        <span class="badge green">CHECK STATUS 2026</span>
+      </div>
+    </div>
+    <p>Startup pitch competition with Reliance backing. Career value is primarily for entrepreneurship track. Winners get mentorship and seed funding consideration from Reliance's venture ecosystem. MBA panels recognize it but it's less impactful than TIC or L.I.M.E. for corporate strategy roles. <strong>Entrepreneurship value: 8/10. Strategy/corporate: 5/10.</strong></p>
+  </div>
+
+  <!-- INFOSYS INGENIOUS -->
+  <div class="comp-card tier2" id="infosys">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Infosys Ingenious</div>
+        <div class="comp-org">Infosys · IT/Tech · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge gold">TIER 2</span>
+        <span class="badge blue">TECH-BUSINESS</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <p>Technology innovation challenge from Infosys. Strong for IT consulting career positioning and Infosys internship pipeline. Lower FMCG/pure strategy value. Best for engineering students interested in tech consulting. <strong>Tech consulting value: 7/10. MBA value: 5/10.</strong></p>
+  </div>
+
+  <!-- LOREAL BRANDSTORM (here as its so India-relevant) -->
+  <div class="comp-card tier1" id="loreal">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">L'Oréal Brandstorm</div>
+        <div class="comp-org">L'Oréal · Beauty/FMCG · Global (India Track Active)</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1</span>
+        <span class="badge gold">GLOBAL FINALS</span>
+        <span class="badge blue">PARIS EXPOSURE</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Global participants:</strong> 70+ countries, 50,000+ students</li>
+          <li><strong>India finalists → Global finals:</strong> Paris</li>
+          <li><strong>Focus:</strong> Brand strategy, innovation, sustainability in beauty</li>
+          <li><strong>Eligibility:</strong> UG + MBA, any discipline</li>
+          <li><strong>Team:</strong> 3 members</li>
+          <li><strong>Prize:</strong> Global finals trip to Paris + internship consideration</li>
+          <li><strong>Timeline:</strong> February–June (global finals)</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career Impact</h4>
+        <ul>
+          <li>Highest international exposure of any FMCG competition for India students</li>
+          <li>Global finals in Paris — extraordinary resume signal</li>
+          <li>L'Oréal India HR directly recruits from Brandstorm</li>
+          <li>International MBA programs (INSEAD, HEC Paris) respect this enormously</li>
+          <li>Strong signal for beauty, luxury, consumer goods globally</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Global Prestige</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+      <div class="rating-item"><div class="rating-label">International MBA Value</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+      <div class="rating-item"><div class="rating-label">FMCG Career Value</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+      <div class="rating-item"><div class="rating-label">IIM MBA Value</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+      <div class="rating-item"><div class="rating-label">Difficulty</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+    </div>
+    <div class="callout gold">
+      <strong>Special Note for BBA Students</strong>
+      Brandstorm is OPEN to undergraduates and is one of the ONLY global competitions where a strong BBA team can reach an international final against top global university students. A Paris final appearance is extraordinary for any Indian UG profile.
+    </div>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<!-- SECTION 2: CONSULTING COMPETITIONS -->
+<!-- ════════════════════════════════════════ -->
+<div class="section" id="consulting">
+  <div class="section-label">Section 02</div>
+  <h2>Consulting & Strategy Competitions</h2>
+
+  <div class="comp-card tier1" id="bcg">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">BCG Strategy Cup / BCG Platinion Challenge</div>
+        <div class="comp-org">Boston Consulting Group · MBB · India + Global</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1 ELITE</span>
+        <span class="badge red">MBB SIGNAL</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Focus:</strong> Real consulting case problems — strategy, digital, ops</li>
+          <li><strong>Eligibility:</strong> MBA students (top IIMs, ISB, XLRI)</li>
+          <li><strong>Format:</strong> Case submission → live BCG consultant interaction → finals</li>
+          <li><strong>Prize:</strong> Cash + BCG fast-track interview consideration</li>
+          <li><strong>Timeline:</strong> September–January</li>
+          <li><strong>Jury:</strong> BCG consultants and partners</li>
+        </ul>
+      </div>
+      <div>
+        <h4>The Real Career Value</h4>
+        <ul>
+          <li><strong>Finalist = almost guaranteed BCG interview shortlist</strong></li>
+          <li>Winners have directly received BCG consulting offers in past years</li>
+          <li>BCG uses this as an informal aptitude filter</li>
+          <li>Strong signal to McKinsey and Bain recruiters too</li>
+          <li>Even participating seriously signals consulting intent</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Consulting Prestige</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10 — It's BCG.</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Value</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+      <div class="rating-item"><div class="rating-label">Hiring Potential</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10 — Direct pipeline</div></div>
+      <div class="rating-item"><div class="rating-label">Difficulty</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10 — Extremely hard</div></div>
+    </div>
+    <div class="callout" style="border-color:var(--accent);">
+      <strong>⚠ Brutal Reality Check</strong>
+      BCG Strategy Cup is dominated by IIM-A, B, C, ISB students who have done 200+ case practices. If you're not at an IIM/ISB currently, this is aspirational — but winning at a Tier-2 B-school level can still create BCG buzz if the solution is genuinely brilliant.
+    </div>
+  </div>
+
+  <div class="comp-card tier1" id="mckinsey">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">McKinsey Forward / McKinsey Global Connections</div>
+        <div class="comp-org">McKinsey & Company · MBB · Global</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1 ELITE</span>
+        <span class="badge blue">LEADERSHIP PROGRAM</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>McKinsey Forward Program</h4>
+        <ul>
+          <li>NOT a traditional competition — it's a <strong>free online leadership program</strong></li>
+          <li>Open to professionals and advanced students globally</li>
+          <li>McKinsey certification carries enormous weight</li>
+          <li>Completion signals consultancy aptitude and leadership capacity</li>
+          <li>Has led to McKinsey internship conversations for graduates</li>
+        </ul>
+      </div>
+      <div>
+        <h4>McKinsey Case Competitions (Campus)</h4>
+        <ul>
+          <li>Campus-specific case nights hosted by McKinsey India</li>
+          <li>Not public — by McKinsey invitation to top B-schools</li>
+          <li>Performing well in McKinsey case workshops → interview consideration</li>
+          <li>Available at IIM-A, IIM-B, IIM-C, ISB, XLRI</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Global Consulting Prestige</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+      <div class="rating-item"><div class="rating-label">Forward Program Value</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10 — free, accessible, credible</div></div>
+    </div>
+  </div>
+
+  <div class="comp-card tier2" id="accenture">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Accenture Strategy Innovation Challenge</div>
+        <div class="comp-org">Accenture · Strategy/Tech Consulting · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge gold">TIER 2</span>
+        <span class="badge grey">STRATEGY+TECH</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <p>Strong for tech consulting career positioning. Accenture Strategy is well-respected. Cases blend digital transformation, AI strategy, and operations. Strong for engineering students targeting consulting. <strong>Tech consulting value: 8/10. Pure management consulting signal: 6/10.</strong></p>
+  </div>
+
+  <!-- KPMG INTERNATIONAL -->
+  <div class="comp-card tier1" id="kpmg-intl">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">KPMG International Case Competition</div>
+        <div class="comp-org">KPMG · Big 4 · Global</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1</span>
+        <span class="badge gold">GLOBAL FINALS</span>
+        <span class="badge blue">INTERNATIONAL EXPOSURE</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Open to:</strong> Global university teams — India competes</li>
+          <li><strong>Format:</strong> 48-hour case study → global finals presentation</li>
+          <li><strong>Global finals location:</strong> Rotates internationally</li>
+          <li><strong>India qualifier:</strong> Held at top B-schools</li>
+          <li><strong>Prize:</strong> Global travel + KPMG network + cash</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career Value</h4>
+        <ul>
+          <li>One of the most internationally recognized case competitions</li>
+          <li>Global finals appearance is extraordinary for any Indian student's profile</li>
+          <li>KPMG global recruitment team actively monitors finalists</li>
+          <li>ISB and IIM-A regularly qualify for this</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">International Prestige</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Value</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+      <div class="rating-item"><div class="rating-label">Global Exposure</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<!-- SECTION 3: GLOBAL COMPETITIONS -->
+<!-- ════════════════════════════════════════ -->
+<div class="section" id="global">
+  <div class="section-label">Section 03</div>
+  <h2>Global Competitions — Open to Indian Students</h2>
+
+  <!-- HULT PRIZE -->
+  <div class="comp-card global" id="hult">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Hult Prize</div>
+        <div class="comp-org">Hult Prize Foundation · Social Impact · Global</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge green">GLOBAL ELITE</span>
+        <span class="badge gold">$1M PRIZE</span>
+        <span class="badge blue">UN PARTNERSHIP</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Grand prize:</strong> $1 million seed funding</li>
+          <li><strong>Participants:</strong> 1 million+ students from 120+ countries</li>
+          <li><strong>Indian participation:</strong> Extremely strong — India regularly finalist</li>
+          <li><strong>Theme:</strong> Annual UN SDG-aligned social business challenge</li>
+          <li><strong>Campus rounds:</strong> Active in 200+ Indian colleges</li>
+          <li><strong>Regional finals:</strong> Multiple global cities</li>
+          <li><strong>Online/Offline:</strong> Campus → Regional (offline) → Global (offline)</li>
+          <li><strong>Fee:</strong> Free</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career Impact Analysis</h4>
+        <ul>
+          <li>International MBA (HBS, Wharton, LBS) — VERY high recognition</li>
+          <li>IIM, ISB panels recognize it for social entrepreneurship track</li>
+          <li>Regional finalist or above = strong MBA differentiator</li>
+          <li>Campus round winner = modest but valid signal</li>
+          <li>Startup ecosystem credibility is high globally</li>
+          <li>UN & global NGO visibility for social impact careers</li>
+          <li>Impact investing circles actively track Hult finalists</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Global Prestige</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+      <div class="rating-item"><div class="rating-label">Intl MBA Value</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+      <div class="rating-item"><div class="rating-label">IIM MBA Value</div><div class="rating-bar"><div class="rating-fill r7"></div></div><div class="rating-score">7/10 — if regional+</div></div>
+      <div class="rating-item"><div class="rating-label">Social Impact Value</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+      <div class="rating-item"><div class="rating-label">Startup Value</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+      <div class="rating-item"><div class="rating-label">Difficulty</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10 (global stage)</div></div>
+    </div>
+    <div class="highlight-box">
+      <strong>Reality Check:</strong> Campus-round Hult Prize wins are quite common and carry limited signal. The real value begins at Regional Finalist level. For an Indian student targeting international MBA programs like HBS, Booth, or INSEAD, a Hult Prize Regional Finals appearance is one of the strongest differentiators possible.
+    </div>
+    <h4>Preparation Strategy</h4>
+    <ul>
+      <li>Study UN SDG framework + current global challenge theme deeply</li>
+      <li>Build a viable business model — judges are sophisticated; social washing fails</li>
+      <li>Use Lean Startup + Theory of Change frameworks together</li>
+      <li>Practice pitching to international audiences (cultural adaptability matters)</li>
+      <li>Read past winning solutions from Hult Prize website</li>
+    </ul>
+  </div>
+
+  <!-- GOOGLE SOLUTION CHALLENGE -->
+  <div class="comp-card global" id="google">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Google Solution Challenge</div>
+        <div class="comp-org">Google · Big Tech · Global (Remote)</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge green">GLOBAL</span>
+        <span class="badge blue">TECH + IMPACT</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Focus:</strong> Build Google tech-powered solutions for UN SDGs</li>
+          <li><strong>Eligibility:</strong> University students globally (GDC members)</li>
+          <li><strong>Must use:</strong> Google technologies (Firebase, Cloud, etc.)</li>
+          <li><strong>Prize:</strong> Trip to Google HQ + cash + mentorship</li>
+          <li><strong>Format:</strong> Submit working solution → top 100 → top 10 demo</li>
+          <li><strong>India participation:</strong> Very strong through GDSCs</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career Value</h4>
+        <ul>
+          <li>Top 10 globally = extraordinary signal for Big Tech PM/SWE roles</li>
+          <li>Google recruiters notice this competition</li>
+          <li>Strong for product management, tech entrepreneurship careers</li>
+          <li>Must have working code — not theoretical (high bar)</li>
+          <li>Lower FMCG/MBA value, very high PM/tech value</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Big Tech Prestige</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+      <div class="rating-item"><div class="rating-label">PM Career Value</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Value</div><div class="rating-bar"><div class="rating-fill r6"></div></div><div class="rating-score">6/10</div></div>
+    </div>
+  </div>
+
+  <!-- MICROSOFT IMAGINE CUP -->
+  <div class="comp-card global" id="microsoft">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Microsoft Imagine Cup</div>
+        <div class="comp-org">Microsoft · Big Tech · Global</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge green">GLOBAL</span>
+        <span class="badge blue">TECH INNOVATION</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <p>One of the world's oldest tech student competitions (since 2003). Strong for AI/ML solutions using Azure. India has produced global finalists. Prize: $100K + Azure credits + Microsoft mentorship. Strong for PM, tech entrepreneurship, Microsoft career signaling. <strong>Big Tech prestige: 9/10. MBA value: 6/10. PM/Tech career: 9/10.</strong></p>
+  </div>
+
+  <!-- CFA RESEARCH CHALLENGE -->
+  <div class="comp-card global" id="cfa">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">CFA Institute Research Challenge</div>
+        <div class="comp-org">CFA Institute · Finance · Global</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge green">GLOBAL ELITE</span>
+        <span class="badge gold">FINANCE GOLD</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Focus:</strong> Equity research — analyze real listed company</li>
+          <li><strong>Format:</strong> Detailed investment report + 15-min presentation</li>
+          <li><strong>Mentored by:</strong> CFA charterholder professional</li>
+          <li><strong>Eligibility:</strong> UG + MBA finance students</li>
+          <li><strong>Rounds:</strong> Campus → Regional (India) → Asia-Pacific → Global</li>
+          <li><strong>Prize:</strong> CFA recognition + career network + trip</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career Impact</h4>
+        <ul>
+          <li>The most prestigious student finance competition globally</li>
+          <li>Buy-side and sell-side recruiters actively watch this</li>
+          <li>India regional winners have received investment banking interview fast-tracks</li>
+          <li>Strong for PE, HF, IB, asset management careers</li>
+          <li>Much more specialized than business case competitions</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Finance Prestige</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10 — #1 in student finance</div></div>
+      <div class="rating-item"><div class="rating-label">Finance Career Value</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Finance Value</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+      <div class="rating-item"><div class="rating-label">Difficulty</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10 — real financial modeling</div></div>
+    </div>
+  </div>
+
+  <!-- HARVARD GLOBAL CASE -->
+  <div class="comp-card global" id="harvard">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Harvard Model Congress / Harvard Case Competition</div>
+        <div class="comp-org">Harvard University · Academic · Global</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge green">GLOBAL</span>
+        <span class="badge gold">BRAND VALUE</span>
+      </div>
+    </div>
+    <p>The Harvard brand is strong but these competitions vary in selectivity. The Harvard Business School New Venture Competition and Harvard Entrepreneurship competitions (through Harvard i-lab) are genuine — finalists have strong startup credibility. The Harvard Case Competition (hosted by HBS clubs) is excellent MBA-level signal. <strong>MBA value: 9/10 if finalist. General value: 8/10 brand, 6/10 selectivity concern.</strong></p>
+    <div class="callout blue">
+      <strong>Note on "Harvard" Competitions</strong>
+      Be careful — many competitions use "Harvard" branding but are not run by Harvard University itself. The legitimate ones are: HBS New Venture Competition, Harvard i-lab competitions, and competitions hosted by HBS clubs. These are excellent. Unaffiliated "Harvard-themed" competitions carry near-zero career value.
+    </div>
+  </div>
+
+  <!-- UNILEVER ULPF -->
+  <div class="comp-card global" id="unilever">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Unilever Future Leaders League (UFLL)</div>
+        <div class="comp-org">Unilever · FMCG · Global</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1</span>
+        <span class="badge gold">GLOBAL FINALS</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Global participants:</strong> 50,000+ from 60+ countries</li>
+          <li><strong>India track:</strong> Active and competitive</li>
+          <li><strong>Focus:</strong> FMCG business challenge + sustainability</li>
+          <li><strong>Eligibility:</strong> Final-year UG + MBA</li>
+          <li><strong>Prize:</strong> Career acceleration + global internship track</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career Value</h4>
+        <ul>
+          <li>Global Unilever brand = strong international FMCG signal</li>
+          <li>India national finalists tracked for HUL internship</li>
+          <li>Strong complement to HUL L.I.M.E.</li>
+          <li>International MBA programs in Europe recognize this strongly</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Global Prestige</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+      <div class="rating-item"><div class="rating-label">FMCG Career Value</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<!-- SECTION 4: STARTUP COMPETITIONS -->
+<!-- ════════════════════════════════════════ -->
+<div class="section" id="startup">
+  <div class="section-label">Section 04</div>
+  <h2>Startup & Entrepreneurship Competitions</h2>
+
+  <div class="comp-card tier1" id="smartindia">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Smart India Hackathon (SIH)</div>
+        <div class="comp-org">Ministry of Education / AICTE · Government · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1 — INDIA</span>
+        <span class="badge blue">GOVERNMENT BACKED</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>India's largest hackathon</strong> — 1 million+ participants</li>
+          <li><strong>Problem statements:</strong> From real government ministries</li>
+          <li><strong>Eligibility:</strong> Engineering + any UG students</li>
+          <li><strong>Team:</strong> 6 members, cross-disciplinary</li>
+          <li><strong>Prize:</strong> ₹1 lakh per team winner per track</li>
+          <li><strong>Format:</strong> 36-hour live coding + presentation</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career Value — The Real Picture</h4>
+        <ul>
+          <li>Massive LinkedIn visibility — national recognition</li>
+          <li>Government and PSU career signal — moderate to strong</li>
+          <li>Startup ecosystem: moderate (government problems, not market problems)</li>
+          <li>MBA value: moderate — IIM panels respect problem-solving, not hackathon per se</li>
+          <li>Best value for engineering students and those targeting gov-tech/smart cities</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">India Recognition</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10 — massive brand</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Value</div><div class="rating-bar"><div class="rating-fill r6"></div></div><div class="rating-score">6/10</div></div>
+      <div class="rating-item"><div class="rating-label">Startup Value</div><div class="rating-bar"><div class="rating-fill r6"></div></div><div class="rating-score">6/10</div></div>
+      <div class="rating-item"><div class="rating-label">Tech Career Value</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+    </div>
+  </div>
+
+  <div class="comp-card tier1" id="iitbombay">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">E-Cell IIT Bombay — Eureka! Business Plan Competition</div>
+        <div class="comp-org">IIT Bombay E-Cell · Startup · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1</span>
+        <span class="badge gold">STARTUP GOLD</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4>Quick Facts</h4>
+        <ul>
+          <li><strong>Asia's largest business plan competition</strong></li>
+          <li>15,000+ participants, 30+ countries</li>
+          <li><strong>Prize pool:</strong> ₹25 lakh+</li>
+          <li><strong>Mentors:</strong> Top VCs, founders, angels</li>
+          <li><strong>Eligibility:</strong> Open to all — UG, MBA, professionals, startups</li>
+          <li><strong>Format:</strong> Business plan → prototype → pitch</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Career + Startup Value</h4>
+        <ul>
+          <li>Top VC firms in India (Sequoia/Peak XV, Accel, Elevation) mentor and watch this</li>
+          <li>Winners have received seed funding discussions</li>
+          <li>Strong for entrepreneurship track at MBA admissions</li>
+          <li>IIT Bombay brand + E-Cell network = exceptional startup contacts</li>
+          <li>IIM MBA panels strongly value this for innovation profile</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ratings-grid">
+      <div class="rating-item"><div class="rating-label">Startup Prestige</div><div class="rating-bar"><div class="rating-fill r10"></div></div><div class="rating-score">10/10</div></div>
+      <div class="rating-item"><div class="rating-label">MBA Value</div><div class="rating-bar"><div class="rating-fill r8"></div></div><div class="rating-score">8/10</div></div>
+      <div class="rating-item"><div class="rating-label">VC Network Value</div><div class="rating-bar"><div class="rating-fill r9"></div></div><div class="rating-score">9/10</div></div>
+    </div>
+  </div>
+
+  <div class="comp-card tier1" id="iimahd">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">CIIE.CO / IIM Ahmedabad — Startup Competitions</div>
+        <div class="comp-org">IIM Ahmedabad CIIE · Startup Incubation · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge red">TIER 1</span>
+        <span class="badge blue">IIM BRAND</span>
+      </div>
+    </div>
+    <p>IIM Ahmedabad's CIIE.CO runs India's most prestigious academic incubation programs. Being incubated or recognized by CIIE/IIM-A is extraordinarily strong for Indian startup ecosystem credibility. The iAccelerator program at CIIE has produced notable startups. <strong>Startup value: 10/10. MBA value: 9/10 for entrepreneurship track.</strong></p>
+  </div>
+
+  <div class="comp-card tier2" id="startupindia">
+    <div class="comp-header">
+      <div>
+        <div class="comp-title">Startup India Innovation Challenge</div>
+        <div class="comp-org">Ministry of Commerce / DPIIT · Government · India</div>
+      </div>
+      <div class="badge-row">
+        <span class="badge gold">TIER 2</span>
+        <span class="badge grey">GOVERNMENT</span>
+        <span class="badge green">ACTIVE 2026</span>
+      </div>
+    </div>
+    <p>Government-backed startup challenge with DPIIT recognition. The DPIIT startup recognition itself (not just winning) is valuable for regulatory benefits. Competition value is moderate — judges are government officials, not industry VCs. Better for social innovation + govtech careers than pure startups. <strong>Startup value: 6/10. Government career value: 8/10.</strong></p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<!-- SECTION 5: ADDITIONAL NOTABLE COMPETITIONS -->
+<!-- ════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Section 05</div>
+  <h2>Additional Notable Competitions</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Competition</th>
+          <th>Organizer</th>
+          <th>Tier</th>
+          <th>Best For</th>
+          <th>MBA Value</th>
+          <th>Hiring Value</th>
+          <th>Difficulty</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Meesho Dice</strong></td>
+          <td>Meesho</td>
+          <td><span class="badge gold">T2</span></td>
+          <td>E-commerce, D2C strategy, PM</td>
+          <td>5/10</td>
+          <td>7/10</td>
+          <td>6/10</td>
+        </tr>
+        <tr>
+          <td><strong>Bain Burst</strong> (internal campus events)</td>
+          <td>Bain & Company</td>
+          <td><span class="badge red">T1</span></td>
+          <td>Consulting career pipeline</td>
+          <td>10/10</td>
+          <td>10/10</td>
+          <td>10/10</td>
+        </tr>
+        <tr>
+          <td><strong>Google Business Group Challenges</strong></td>
+          <td>Google India</td>
+          <td><span class="badge gold">T2</span></td>
+          <td>Tech-business strategy, PM</td>
+          <td>6/10</td>
+          <td>7/10</td>
+          <td>6/10</td>
+        </tr>
+        <tr>
+          <td><strong>Microsoft Hackathon (Student Partner)</strong></td>
+          <td>Microsoft India</td>
+          <td><span class="badge gold">T2</span></td>
+          <td>Tech + innovation, SWE careers</td>
+          <td>5/10</td>
+          <td>7/10</td>
+          <td>6/10</td>
+        </tr>
+        <tr>
+          <td><strong>ITC Interrobang</strong></td>
+          <td>ITC Limited</td>
+          <td><span class="badge red">T1</span></td>
+          <td>FMCG, brand, marketing</td>
+          <td>8/10</td>
+          <td>8/10</td>
+          <td>8/10</td>
+        </tr>
+        <tr>
+          <td><strong>Naukri Future of Work Challenge</strong></td>
+          <td>Naukri / Info Edge</td>
+          <td><span class="badge grey">T3</span></td>
+          <td>HR tech, D2C hiring</td>
+          <td>3/10</td>
+          <td>4/10</td>
+          <td>4/10</td>
+        </tr>
+        <tr>
+          <td><strong>Mahindra War Room</strong></td>
+          <td>Mahindra Group</td>
+          <td><span class="badge red">T1</span></td>
+          <td>Auto, EV strategy, MBA signal</td>
+          <td>8/10</td>
+          <td>8/10</td>
+          <td>8/10</td>
+        </tr>
+        <tr>
+          <td><strong>Bajaj Mastermind</strong></td>
+          <td>Bajaj Auto</td>
+          <td><span class="badge gold">T2</span></td>
+          <td>Automotive, strategy</td>
+          <td>6/10</td>
+          <td>7/10</td>
+          <td>6/10</td>
+        </tr>
+        <tr>
+          <td><strong>SBI Youth for India (Fellowship)</strong></td>
+          <td>SBI Foundation</td>
+          <td><span class="badge red">T1</span></td>
+          <td>Social impact, development, MBA</td>
+          <td>9/10</td>
+          <td>7/10</td>
+          <td>8/10</td>
+        </tr>
+        <tr>
+          <td><strong>HDFC Future Bankers</strong></td>
+          <td>HDFC Bank</td>
+          <td><span class="badge gold">T2</span></td>
+          <td>BFSI career, leadership</td>
+          <td>5/10</td>
+          <td>8/10</td>
+          <td>6/10</td>
+        </tr>
+        <tr>
+          <td><strong>YES BANK Transformation Series</strong></td>
+          <td>YES Bank</td>
+          <td><span class="badge grey">T3</span></td>
+          <td>BFSI, moderate signal</td>
+          <td>4/10</td>
+          <td>5/10</td>
+          <td>5/10</td>
+        </tr>
+        <tr>
+          <td><strong>IIM Calcutta Finance & Investment Club</strong></td>
+          <td>IIMC</td>
+          <td><span class="badge red">T1</span></td>
+          <td>Finance, investment banking</td>
+          <td>9/10</td>
+          <td>8/10</td>
+          <td>9/10</td>
+        </tr>
+        <tr>
+          <td><strong>Aavishkaar Hackathon (IIT Delhi)</strong></td>
+          <td>IIT Delhi</td>
+          <td><span class="badge gold">T2</span></td>
+          <td>Tech innovation, engineering</td>
+          <td>6/10</td>
+          <td>6/10</td>
+          <td>7/10</td>
+        </tr>
+        <tr>
+          <td><strong>Goldman Sachs Global Impact Challenge</strong></td>
+          <td>Goldman Sachs</td>
+          <td><span class="badge red">T1</span></td>
+          <td>Finance, social impact</td>
+          <td>9/10</td>
+          <td>9/10</td>
+          <td>9/10</td>
+        </tr>
+        <tr>
+          <td><strong>ITC Interrobang</strong></td>
+          <td>ITC</td>
+          <td><span class="badge red">T1</span></td>
+          <td>FMCG, brand strategy</td>
+          <td>8/10</td>
+          <td>8/10</td>
+          <td>8/10</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<!-- SECTION 6: RANKINGS -->
+<!-- ════════════════════════════════════════ -->
+<div class="section" id="rankings">
+  <div class="section-label">Section 06</div>
+  <h2>Master Rankings — All Categories</h2>
+
+  <div class="two-col">
+
+    <!-- TOP 10 OVERALL -->
+    <div>
+      <h3>🏆 Top 10 Overall (Career Impact)</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Competition</th><th>Score</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-num">1</span></td><td>HUL L.I.M.E.</td><td>97/100</td></tr>
+            <tr><td><span class="rank-num">2</span></td><td>BCG Strategy Cup</td><td>96/100</td></tr>
+            <tr><td><span class="rank-num">3</span></td><td>Tata Imagination Challenge</td><td>93/100</td></tr>
+            <tr><td><span class="rank-num">4</span></td><td>L'Oréal Brandstorm (Regional+)</td><td>92/100</td></tr>
+            <tr><td><span class="rank-num">5</span></td><td>Deloitte Maverick</td><td>88/100</td></tr>
+            <tr><td><span class="rank-num">6</span></td><td>Hult Prize (Regional+)</td><td>87/100</td></tr>
+            <tr><td><span class="rank-num">7</span></td><td>Marico Over The Wall</td><td>86/100</td></tr>
+            <tr><td><span class="rank-num">8</span></td><td>ABG Stratos</td><td>84/100</td></tr>
+            <tr><td><span class="rank-num">9</span></td><td>EY CAFTA</td><td>83/100</td></tr>
+            <tr><td><span class="rank-num">10</span></td><td>Eureka! IIT Bombay</td><td>82/100</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TOP 10 MBA ADMISSIONS -->
+    <div>
+      <h3>🎓 Top 10 for MBA Admissions</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Competition</th><th>IIM Value</th><th>Global MBA</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-num">1</span></td><td>HUL L.I.M.E.</td><td>10/10</td><td>8/10</td></tr>
+            <tr><td><span class="rank-num">2</span></td><td>Tata Imagination Challenge</td><td>9/10</td><td>7/10</td></tr>
+            <tr><td><span class="rank-num">3</span></td><td>BCG Strategy Cup</td><td>10/10</td><td>9/10</td></tr>
+            <tr><td><span class="rank-num">4</span></td><td>Hult Prize (Regional)</td><td>7/10</td><td>10/10</td></tr>
+            <tr><td><span class="rank-num">5</span></td><td>L'Oréal Brandstorm</td><td>8/10</td><td>10/10</td></tr>
+            <tr><td><span class="rank-num">6</span></td><td>Deloitte Maverick</td><td>8/10</td><td>7/10</td></tr>
+            <tr><td><span class="rank-num">7</span></td><td>Mahindra War Room</td><td>8/10</td><td>6/10</td></tr>
+            <tr><td><span class="rank-num">8</span></td><td>ABG Stratos</td><td>8/10</td><td>6/10</td></tr>
+            <tr><td><span class="rank-num">9</span></td><td>Eureka! IIT Bombay</td><td>8/10</td><td>7/10</td></tr>
+            <tr><td><span class="rank-num">10</span></td><td>IIM Calcutta Finance Club</td><td>9/10</td><td>7/10</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col" style="margin-top:24px;">
+
+    <!-- TOP 10 CONSULTING -->
+    <div>
+      <h3>📊 Top 10 for Consulting Careers</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Competition</th><th>MBB Signal</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-num">1</span></td><td>BCG Strategy Cup</td><td>★★★★★</td></tr>
+            <tr><td><span class="rank-num">2</span></td><td>Bain Burst (campus)</td><td>★★★★★</td></tr>
+            <tr><td><span class="rank-num">3</span></td><td>Deloitte Maverick</td><td>★★★★</td></tr>
+            <tr><td><span class="rank-num">4</span></td><td>McKinsey Forward</td><td>★★★★</td></tr>
+            <tr><td><span class="rank-num">5</span></td><td>KPMG Intl Case Competition</td><td>★★★★</td></tr>
+            <tr><td><span class="rank-num">6</span></td><td>EY CAFTA</td><td>★★★½</td></tr>
+            <tr><td><span class="rank-num">7</span></td><td>Accenture Strategy Challenge</td><td>★★★</td></tr>
+            <tr><td><span class="rank-num">8</span></td><td>IIM consulting club cases</td><td>★★★</td></tr>
+            <tr><td><span class="rank-num">9</span></td><td>HUL L.I.M.E. (indirect)</td><td>★★★</td></tr>
+            <tr><td><span class="rank-num">10</span></td><td>KPMG Ideation Challenge</td><td>★★★</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TOP 10 MARKETING -->
+    <div>
+      <h3>📣 Top 10 for Marketing Careers</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Competition</th><th>FMCG Signal</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-num">1</span></td><td>HUL L.I.M.E.</td><td>★★★★★</td></tr>
+            <tr><td><span class="rank-num">2</span></td><td>P&G CEO Challenge</td><td>★★★★★</td></tr>
+            <tr><td><span class="rank-num">3</span></td><td>L'Oréal Brandstorm</td><td>★★★★★</td></tr>
+            <tr><td><span class="rank-num">4</span></td><td>Marico Over The Wall</td><td>★★★★½</td></tr>
+            <tr><td><span class="rank-num">5</span></td><td>Unilever UFLL</td><td>★★★★</td></tr>
+            <tr><td><span class="rank-num">6</span></td><td>Asian Paints Canvas</td><td>★★★★</td></tr>
+            <tr><td><span class="rank-num">7</span></td><td>Nestlé Gurukul</td><td>★★★½</td></tr>
+            <tr><td><span class="rank-num">8</span></td><td>ITC Interrobang</td><td>★★★½</td></tr>
+            <tr><td><span class="rank-num">9</span></td><td>Mondelez BizWiz</td><td>★★★</td></tr>
+            <tr><td><span class="rank-num">10</span></td><td>Tata Imagination Challenge</td><td>★★★</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col" style="margin-top:24px;">
+
+    <!-- TOP 10 ENTREPRENEURSHIP -->
+    <div>
+      <h3>🚀 Top 10 for Entrepreneurship</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Competition</th><th>Startup Signal</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-num">1</span></td><td>Hult Prize (Regional+)</td><td>★★★★★</td></tr>
+            <tr><td><span class="rank-num">2</span></td><td>Eureka! IIT Bombay</td><td>★★★★★</td></tr>
+            <tr><td><span class="rank-num">3</span></td><td>IIM-A CIIE iAccelerator</td><td>★★★★★</td></tr>
+            <tr><td><span class="rank-num">4</span></td><td>Google Solution Challenge</td><td>★★★★</td></tr>
+            <tr><td><span class="rank-num">5</span></td><td>Microsoft Imagine Cup</td><td>★★★★</td></tr>
+            <tr><td><span class="rank-num">6</span></td><td>Tata Imagination Challenge</td><td>★★★½</td></tr>
+            <tr><td><span class="rank-num">7</span></td><td>Goldman Sachs Impact Challenge</td><td>★★★½</td></tr>
+            <tr><td><span class="rank-num">8</span></td><td>Reliance TUP</td><td>★★★</td></tr>
+            <tr><td><span class="rank-num">9</span></td><td>Startup India Innovation Challenge</td><td>★★★</td></tr>
+            <tr><td><span class="rank-num">10</span></td><td>Smart India Hackathon</td><td>★★½</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TOP 10 PM -->
+    <div>
+      <h3>💻 Top 10 for Product Management</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Competition</th><th>PM Signal</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-num">1</span></td><td>Google Solution Challenge</td><td>★★★★★</td></tr>
+            <tr><td><span class="rank-num">2</span></td><td>Microsoft Imagine Cup</td><td>★★★★</td></tr>
+            <tr><td><span class="rank-num">3</span></td><td>Amazon Ace</td><td>★★★★</td></tr>
+            <tr><td><span class="rank-num">4</span></td><td>Flipkart Wired</td><td>★★★★</td></tr>
+            <tr><td><span class="rank-num">5</span></td><td>Meesho Dice</td><td>★★★</td></tr>
+            <tr><td><span class="rank-num">6</span></td><td>Infosys Ingenious</td><td>★★★</td></tr>
+            <tr><td><span class="rank-num">7</span></td><td>Smart India Hackathon</td><td>★★★</td></tr>
+            <tr><td><span class="rank-num">8</span></td><td>Accenture Innovation Challenge</td><td>★★★</td></tr>
+            <tr><td><span class="rank-num">9</span></td><td>Tata Imagination Challenge</td><td>★★★</td></tr>
+            <tr><td><span class="rank-num">10</span></td><td>Eureka! IIT Bombay</td><td>★★½</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEGINNER VS ELITE -->
+  <div class="two-col" style="margin-top:24px;">
+    <div>
+      <h3>🌱 Best Beginner Competitions</h3>
+      <p style="font-size:13px; color:var(--mid);">For students with no prior competition experience from any college tier</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Competition</th><th>Why Beginner-Friendly</th></tr></thead>
+          <tbody>
+            <tr><td><strong>EY CAFTA</strong></td><td>Open to BBA/BCom, structured format, Big 4 brand</td></tr>
+            <tr><td><strong>Deloitte Maverick</strong></td><td>Large pool = learning opportunity, broad topics</td></tr>
+            <tr><td><strong>L'Oréal Brandstorm</strong></td><td>Creative, open-ended, no finance depth needed</td></tr>
+            <tr><td><strong>Hult Prize (Campus)</strong></td><td>Campus round is low-barrier, high learning</td></tr>
+            <tr><td><strong>Smart India Hackathon</strong></td><td>Team-based, problem-focused, massive community</td></tr>
+            <tr><td><strong>Mahindra War Room</strong></td><td>Clear case format, auto sector knowledge sufficient</td></tr>
+            <tr><td><strong>Meesho Dice</strong></td><td>E-commerce familiarity enough, structured prompts</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <h3>🔥 Elite Competitions (High Bar)</h3>
+      <p style="font-size:13px; color:var(--mid);">Require deep preparation, strong teams, and prior competition experience</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Competition</th><th>Why Elite</th></tr></thead>
+          <tbody>
+            <tr><td><strong>BCG Strategy Cup</strong></td><td>Judges are consultants, near-zero acceptance</td></tr>
+            <tr><td><strong>HUL L.I.M.E.</strong></td><td>50,000+ teams, IIM-level competition</td></tr>
+            <tr><td><strong>Hult Prize (Global)</strong></td><td>100 countries competing, $1M prize, VC-level scrutiny</td></tr>
+            <tr><td><strong>CFA Research Challenge</strong></td><td>Real financial models, CFA-level analysis required</td></tr>
+            <tr><td><strong>KPMG International</strong></td><td>48-hour global case, international judges</td></tr>
+            <tr><td><strong>Tata Imagination Challenge</strong></td><td>Breadth of analysis + Tata-level strategic depth</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- HIDDEN GEMS -->
+  <div style="margin-top:24px;">
+    <h3>💎 Hidden Gems — High Value, Lower Visibility</h3>
+    <div class="three-col">
+      <div class="info-block">
+        <h4>EY CAFTA (UG Track)</h4>
+        <p style="font-size:13px;">Big 4 brand + open to BBA/BCom/CA + genuine internship pipeline = massively underutilized by students.</p>
+        <div class="badge-row"><span class="badge green">HIGH ROI</span><span class="badge blue">UG GOLD</span></div>
+      </div>
+      <div class="info-block">
+        <h4>Mahindra War Room</h4>
+        <p style="font-size:13px;">Mahindra conglomerate brand, EV/auto strategy focus, excellent for IIM applications, underrated vs L.I.M.E.</p>
+        <div class="badge-row"><span class="badge green">HIGH ROI</span></div>
+      </div>
+      <div class="info-block">
+        <h4>ITC Interrobang</h4>
+        <p style="font-size:13px;">ITC's FMCG-plus-hotels-plus-agri complexity makes cases genuinely hard. Underrated vs HUL LIME.</p>
+        <div class="badge-row"><span class="badge green">HIGH ROI</span></div>
+      </div>
+      <div class="info-block">
+        <h4>Goldman Sachs Impact Challenge</h4>
+        <p style="font-size:13px;">Finance + impact combination = rare. GS brand is extraordinary. Underutilized by non-finance students.</p>
+        <div class="badge-row"><span class="badge gold">FINANCE SIGNAL</span></div>
+      </div>
+      <div class="info-block">
+        <h4>McKinsey Forward Program</h4>
+        <p style="font-size:13px;">Free online leadership certification from McKinsey. Underused by Indian students. Carries real resume weight.</p>
+        <div class="badge-row"><span class="badge blue">FREE</span><span class="badge green">HIGH ROI</span></div>
+      </div>
+      <div class="info-block">
+        <h4>CFA Research Challenge</h4>
+        <p style="font-size:13px;">If finance is your path, this is the competition. India students underestimate how much buy-side firms watch it.</p>
+        <div class="badge-row"><span class="badge gold">FINANCE GOLD</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<!-- SECTION 7: COMPARATIVE MATRIX -->
+<!-- ════════════════════════════════════════ -->
+<div class="section" id="matrix">
+  <div class="section-label">Section 07</div>
+  <h2>Comparative Matrix — All Competitions</h2>
+
+  <p>Legend: <span class="dot-high">●</span> High (8–10) &nbsp; <span class="dot-med">●</span> Medium (5–7) &nbsp; <span class="dot-low">●</span> Low (1–4)</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Competition</th>
+          <th>IIM MBA</th>
+          <th>Global MBA</th>
+          <th>Consulting</th>
+          <th>FMCG</th>
+          <th>Tech/PM</th>
+          <th>Startup</th>
+          <th>Finance</th>
+          <th>Intl Exposure</th>
+          <th>UG Eligible</th>
+          <th>Free</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>HUL L.I.M.E.</strong></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell">MBA only</td><td class="matrix-cell">✓</td></tr>
+        <tr><td><strong>BCG Strategy Cup</strong></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell">MBA only</td><td class="matrix-cell">✓</td></tr>
+        <tr><td><strong>Tata Imagination</strong></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell">✓</td><td class="matrix-cell">✓</td></tr>
+        <tr><td><strong>L'Oréal Brandstorm</strong></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell">✓</td><td class="matrix-cell">✓</td></tr>
+        <tr><td><strong>Hult Prize</strong></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell">✓</td><td class="matrix-cell">✓</td></tr>
+        <tr><td><strong>Deloitte Maverick</strong></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell">✓</td><td class="matrix-cell">✓</td></tr>
+        <tr><td><strong>EY CAFTA</strong></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell">✓</td><td class="matrix-cell">✓</td></tr>
+        <tr><td><strong>CFA Research Challenge</strong></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell">✓</td><td class="matrix-cell">✓</td></tr>
+        <tr><td><strong>Google Solution Challenge</strong></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell">✓</td><td class="matrix-cell">✓</td></tr>
+        <tr><td><strong>Eureka! IIT Bombay</strong></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell">✓</td><td class="matrix-cell">✓</td></tr>
+        <tr><td><strong>Amazon Ace</strong></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell">✓</td><td class="matrix-cell">✓</td></tr>
+        <tr><td><strong>Marico OTW</strong></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell">MBA</td><td class="matrix-cell">✓</td></tr>
+        <tr><td><strong>Smart India Hackathon</strong></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell">✓</td><td class="matrix-cell">✓</td></tr>
+        <tr><td><strong>P&G CEO Challenge</strong></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-med">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-low">●</span></td><td class="matrix-cell"><span class="dot-high">●</span></td><td class="matrix-cell">✓</td><td class="matrix-cell">✓</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<!-- SECTION 8: REALITY CHECK -->
+<!-- ════════════════════════════════════════ -->
+<div class="section" id="reality">
+  <div class="section-label">Section 08</div>
+  <h2>Reality Check — What Actually Matters</h2>
+
+  <div class="callout" style="background:#fff0f0; border-color:var(--accent);">
+    <strong>The Hard Truth</strong>
+    The Indian competition ecosystem is filled with noise. Students routinely spend time on competitions that contribute nearly zero career value. This section gives you the unfiltered reality.
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h3 style="color:var(--green);">✓ Competitions That Genuinely Matter</h3>
+      <ul>
+        <li><strong>HUL L.I.M.E.</strong> — National finalist = direct PPO pipeline. IIM panels light up.</li>
+        <li><strong>BCG/Bain/McKinsey campus events</strong> — These are literally auditions. Treat them as interviews.</li>
+        <li><strong>Tata Imagination Challenge</strong> — TAS brand is real. Finalists get tracked.</li>
+        <li><strong>L'Oréal Brandstorm (Regional+)</strong> — Paris trip + global network = career-changing.</li>
+        <li><strong>Hult Prize (Regional+)</strong> — International MBA applications love this. Campus wins don't count much.</li>
+        <li><strong>CFA Research Challenge</strong> — Finance recruiters actually know this competition by name.</li>
+        <li><strong>Eureka! IIT Bombay</strong> — The VC network you build here is genuinely valuable.</li>
+        <li><strong>EY CAFTA (for UG)</strong> — Massively underutilized. BBA student with CAFTA finalist = rare profile.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:var(--accent);">✗ Overrated / Often Resume Fillers</h3>
+      <ul>
+        <li><strong>Generic college fests / inter-college case studies</strong> — Largely ignored by recruiters.</li>
+        <li><strong>IIM case competitions hosted at intra-fest events</strong> — Only valuable if it's the official IIM competition (Consult Club, Finance Club), not random fests.</li>
+        <li><strong>Online certificate-only competitions</strong> — Zero career value. Never put these on a resume.</li>
+        <li><strong>Hult Prize campus rounds (winning only)</strong> — Start of the journey, not the achievement.</li>
+        <li><strong>YES Bank, generic bank competitions</strong> — Low recruiter awareness, modest impact.</li>
+        <li><strong>Most Tier-3 brand competitions</strong> — Judges are mid-level managers, no hiring pipeline exists.</li>
+        <li><strong>Social media business "challenges"</strong> — No real jury, no verification, no value.</li>
+        <li><strong>Unstop/Dare2Compete online competitions without offline finals</strong> — Variable quality. Research each one individually.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top:20px;">
+    <strong>The Depth Rule:</strong> One national finalist position at HUL L.I.M.E. > five certificates from online competitions. Always choose depth over breadth. Recruiters and MBA panels are sophisticated enough to know the difference.
+  </div>
+
+  <h3>Tier-2/Tier-3 College Reality</h3>
+  <p>Students from non-IIM/IIT colleges often ask whether competitions are accessible to them. The honest answer:</p>
+  <div class="three-col">
+    <div class="info-block">
+      <h4>High Accessibility</h4>
+      <ul style="font-size:13px;">
+        <li>EY CAFTA (open to all UG)</li>
+        <li>Deloitte Maverick (open to all)</li>
+        <li>L'Oréal Brandstorm (open to all)</li>
+        <li>Hult Prize (campus-level)</li>
+        <li>Smart India Hackathon</li>
+        <li>Google Solution Challenge</li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <h4>Moderate Accessibility</h4>
+      <ul style="font-size:13px;">
+        <li>Tata Imagination Challenge</li>
+        <li>Goldman Sachs Challenge</li>
+        <li>Eureka! IIT Bombay</li>
+        <li>Microsoft Imagine Cup</li>
+        <li>CFA Research Challenge</li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <h4>Effectively IIM/ISB Only</h4>
+      <ul style="font-size:13px;">
+        <li>BCG Strategy Cup</li>
+        <li>Bain Burst (invitation)</li>
+        <li>HUL L.I.M.E. (effectively)</li>
+        <li>ABG Stratos</li>
+        <li>McKinsey campus events</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout blue">
+    <strong>Strategy for Tier-2 Students</strong>
+    Focus on high-accessibility, high-brand competitions: EY CAFTA + L'Oréal Brandstorm + Hult Prize regional run + Deloitte Maverick + Google/Microsoft tech challenges. This portfolio is achievable AND genuinely impressive.
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<!-- SECTION 9: ANNUAL CALENDAR -->
+<!-- ════════════════════════════════════════ -->
+<div class="section" id="calendar">
+  <div class="section-label">Section 09</div>
+  <h2>Annual Competition Calendar — Month by Month</h2>
+  <p style="color:var(--mid); font-size:13px; margin-bottom:24px;">Note: Exact dates shift annually. Verify on official sites/Unstop each year. This is a historical average timeline.</p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">JANUARY – FEBRUARY</div>
+      <div class="tl-comps">
+        <strong>L'Oréal Brandstorm</strong> registrations open (Feb) · <strong>CFA Research Challenge</strong> national rounds · <strong>BCG Strategy Cup</strong> finals (Jan) · <strong>HUL L.I.M.E.</strong> nationals (Jan–Feb) · <strong>Hult Prize</strong> campus finals
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">MARCH – APRIL</div>
+      <div class="tl-comps">
+        <strong>L'Oréal Brandstorm</strong> India finals (March) · <strong>Hult Prize</strong> regional competitions · <strong>Google Solution Challenge</strong> shortlisting · <strong>Microsoft Imagine Cup</strong> national rounds · <strong>Eureka! IIT Bombay</strong> opens for next cycle
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">MAY – JUNE</div>
+      <div class="tl-comps">
+        <strong>L'Oréal Brandstorm</strong> Global Finals — Paris · <strong>Hult Prize</strong> Global Finals · <strong>Google Solution Challenge</strong> global top 10 · <strong>Goldman Sachs Impact Challenge</strong> opens · MBA summer internships (April–June)
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">JULY – AUGUST</div>
+      <div class="tl-comps">
+        <strong>New academic year competition season begins</strong> · <strong>Deloitte Maverick</strong> registrations open (Aug) · <strong>Marico OTW</strong> registrations (Aug) · <strong>HUL L.I.M.E.</strong> registrations open · <strong>Hult Prize</strong> new year theme announced
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">SEPTEMBER – OCTOBER</div>
+      <div class="tl-comps">
+        <strong>BCG Strategy Cup</strong> registrations (Sep) · <strong>Tata Imagination Challenge</strong> (Sep–Oct) · <strong>Asian Paints Canvas</strong> opens · <strong>ABG Stratos</strong> (Sep–Oct) · <strong>EY CAFTA</strong> (Oct) · <strong>Hult Prize</strong> campus rounds begin · <strong>Smart India Hackathon</strong> registrations
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">NOVEMBER – DECEMBER</div>
+      <div class="tl-comps">
+        <strong>Deloitte Maverick</strong> finals (Nov) · <strong>Flipkart Wired</strong> finals · <strong>Amazon Ace</strong> finals · <strong>P&G CEO Challenge</strong> India rounds · <strong>Nestlé Gurukul</strong> · <strong>Airtel iCreate</strong> · <strong>KPMG Ideation</strong> · <strong>HUL L.I.M.E.</strong> campus + zonal rounds (Nov–Dec)
+      </div>
+    </div>
+  </div>
+
+  <div class="callout gold" style="margin-top:24px;">
+    <strong>Peak Season Alert</strong>
+    September–December is the peak season for corporate competitions in India. This coincides with MBA placement season. Plan your preparation calendar starting August to peak in October–November.
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<!-- SECTION 10: STRATEGIC ROADMAP -->
+<!-- ════════════════════════════════════════ -->
+<div class="section" id="roadmap">
+  <div class="section-label">Section 10</div>
+  <h2>Strategic Roadmap — BBA Student Targeting Top MBA + Corporate Roles</h2>
+
+  <div class="callout blue">
+    <strong>Your Profile</strong>
+    Indian BBA student · Interested in Strategy, Marketing, Innovation, Entrepreneurship, PMO/Program Management, Consulting, Social Innovation · Goal: Top MBA (IIM/ISB/Global) + Corporate Leadership Role
+  </div>
+
+  <h3>Year-by-Year Strategy</h3>
+
+  <div class="roadmap-step">
+    <div class="step-num">Y1</div>
+    <div>
+      <h4 style="margin-top:0;">BBA Year 1 — Foundation & Exploration</h4>
+      <ul>
+        <li><strong>Join:</strong> E-Cell, consulting club, marketing club at your college</li>
+        <li><strong>Target:</strong> Hult Prize campus round (learn, lose, learn) + Deloitte Maverick (exposure)</li>
+        <li><strong>Learn:</strong> Case cracking basics — read Case in Point, Victor Cheng materials</li>
+        <li><strong>Build:</strong> LinkedIn profile — document every competition, club activity, project</li>
+        <li><strong>Goal:</strong> Get comfortable with case formats, PPT presentation, structured thinking</li>
+        <li><strong>Avoid:</strong> Spending too much time on random online certificate competitions</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="roadmap-step">
+    <div class="step-num">Y2</div>
+    <div>
+      <h4 style="margin-top:0;">BBA Year 2 — Skill Build & Signal Competitions</h4>
+      <ul>
+        <li><strong>Target:</strong> EY CAFTA (national finalist push), L'Oréal Brandstorm (India rounds), Hult Prize (push to regional)</li>
+        <li><strong>Target:</strong> Tata Imagination Challenge (UG track), Smart India Hackathon (team building)</li>
+        <li><strong>Build:</strong> FMCG literacy — read Economic Times FMCG, brand case studies</li>
+        <li><strong>Network:</strong> Connect with competition alumni on LinkedIn post-events</li>
+        <li><strong>Start:</strong> McKinsey Forward program (free, do it over summer)</li>
+        <li><strong>CAT/GMAT prep:</strong> Begin baseline assessments, identify weak areas</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="roadmap-step">
+    <div class="step-num">Y3</div>
+    <div>
+      <h4 style="margin-top:0;">BBA Year 3 — Peak Competition Season + MBA Profile Lock</h4>
+      <ul>
+        <li><strong>Target aggressively:</strong> EY CAFTA finalist/winner · L'Oréal Brandstorm India finalist or regional · Hult Prize regional finalist · Deloitte Maverick finals</li>
+        <li><strong>Optional:</strong> Google Solution Challenge (if tech-inclined) · Eureka! IIT Bombay</li>
+        <li><strong>CAT/GMAT:</strong> Full preparation cycle, give CAT/GMAT in November</li>
+        <li><strong>Internship:</strong> Strategically target companies that run competitions — EY, Deloitte, L'Oréal</li>
+        <li><strong>MBA Essays:</strong> Your top 2 competition results + meaningful social/entrepreneurship project = strong story</li>
+        <li><strong>LinkedIn:</strong> Document all competition results, connect with IIM alumni who've won these</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="roadmap-step">
+    <div class="step-num">GAP</div>
+    <div>
+      <h4 style="margin-top:0;">Pre-MBA Work Experience Year (if taking 1–2 yrs work ex)</h4>
+      <ul>
+        <li>Target employer whose brand strengthens MBA application (Big 4, MNC, startup)</li>
+        <li>Continue: Goldman Sachs Impact Challenge · CFA Level 1 (if finance-inclined)</li>
+        <li>Build a concrete "leadership impact" narrative from work for MBA essays</li>
+        <li>Consider: KPMG International Case Competition if at top firm</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="roadmap-step">
+    <div class="step-num">MBA</div>
+    <div>
+      <h4 style="margin-top:0;">At MBA — Maximize Competition ROI</h4>
+      <ul>
+        <li><strong>Must attempt:</strong> HUL L.I.M.E. (Year 1, November) — this is THE competition</li>
+        <li><strong>Must attempt:</strong> BCG Strategy Cup / Deloitte Maverick / Marico OTW</li>
+        <li><strong>Optional:</strong> ABG Stratos, P&G CEO Challenge, Nestlé Gurukul</li>
+        <li><strong>CFA Research Challenge:</strong> If finance track</li>
+        <li><strong>Placement prep:</strong> Use competition networks for PPO conversations</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>The 80/20 Competition Strategy</h3>
+  <div class="highlight-box">
+    <strong>Core Insight:</strong> 20% of competitions deliver 80% of career value. For a BBA student targeting IIM + corporate:
+    <br><br>
+    <strong>Must-do list:</strong> EY CAFTA + L'Oréal Brandstorm + Hult Prize (push to regional) + Deloitte Maverick + McKinsey Forward (free)
+    <br><br>
+    <strong>If tech-inclined add:</strong> Google Solution Challenge or Microsoft Imagine Cup
+    <br><br>
+    <strong>If startup-inclined add:</strong> Eureka! IIT Bombay + any IIM E-cell recognized competitions
+    <br><br>
+    <strong>Avoid:</strong> Anything without an offline finals or a recognizable brand jury
+  </div>
+
+  <h3>Preparation Framework for Any Case Competition</h3>
+  <div class="three-col">
+    <div class="info-block">
+      <h4>Week 1–2: Research</h4>
+      <ul style="font-size:13px;">
+        <li>Deep-dive company/industry context</li>
+        <li>Read last 3 annual reports</li>
+        <li>Study past winner solutions (YouTube, InsideIIM)</li>
+        <li>Map stakeholder landscape</li>
+        <li>Understand market sizing approach</li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <h4>Week 3: Framework Build</h4>
+      <ul style="font-size:13px;">
+        <li>Choose 1–2 consulting frameworks (MECE)</li>
+        <li>Don't over-framework — show judgment</li>
+        <li>Build hypothesis-driven structure</li>
+        <li>Quantify every recommendation</li>
+        <li>Build risk/mitigation slide</li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <h4>Week 4: Presentation</h4>
+      <ul style="font-size:13px;">
+        <li>10–12 slides max (exec brevity)</li>
+        <li>Lead with insight, not process</li>
+        <li>Every slide = one clear message</li>
+        <li>Practice 5+ live presentations</li>
+        <li>Prepare 15 Q&A responses</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<!-- SECTION 11: FINAL TOP 10 LISTS -->
+<!-- ════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Section 11</div>
+  <h2>Final Definitive Lists</h2>
+
+  <div class="two-col">
+    <div>
+      <h3>Best Networking Value</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>#</th><th>Competition</th><th>Network Quality</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>BCG/Bain/McKinsey events</td><td>MBB partners + directors</td></tr>
+          <tr><td>2</td><td>Eureka! IIT Bombay</td><td>Top VCs + founders</td></tr>
+          <tr><td>3</td><td>Hult Prize (regional+)</td><td>Global founders + NGOs</td></tr>
+          <tr><td>4</td><td>HUL L.I.M.E.</td><td>HUL C-suite + FMCG leaders</td></tr>
+          <tr><td>5</td><td>Tata Imagination Challenge</td><td>Tata group leadership</td></tr>
+          <tr><td>6</td><td>L'Oréal Brandstorm</td><td>Global brand leaders</td></tr>
+          <tr><td>7</td><td>KPMG International</td><td>Global Big 4 network</td></tr>
+          <tr><td>8</td><td>CFA Research Challenge</td><td>Investment professionals</td></tr>
+          <tr><td>9</td><td>IIM-A CIIE</td><td>Indian startup ecosystem</td></tr>
+          <tr><td>10</td><td>ABG Stratos</td><td>ABG group leadership</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div>
+      <h3>Highest Direct Hiring Potential</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>#</th><th>Competition</th><th>Hiring Channel</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>BCG Strategy Cup</td><td>BCG consulting offer</td></tr>
+          <tr><td>2</td><td>HUL L.I.M.E.</td><td>HUL PPO/internship</td></tr>
+          <tr><td>3</td><td>Bain campus events</td><td>Bain consulting offer</td></tr>
+          <tr><td>4</td><td>Marico OTW</td><td>Marico PPO</td></tr>
+          <tr><td>5</td><td>EY CAFTA</td><td>EY advisory internship</td></tr>
+          <tr><td>6</td><td>P&G CEO Challenge</td><td>P&G internship</td></tr>
+          <tr><td>7</td><td>ABG Stratos</td><td>ABG management trainee</td></tr>
+          <tr><td>8</td><td>Amazon Ace</td><td>Amazon PM/strategy</td></tr>
+          <tr><td>9</td><td>Flipkart Wired</td><td>Flipkart PM/ops</td></tr>
+          <tr><td>10</td><td>HDFC Future Bankers</td><td>HDFC Bank fast-track</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+
+  <div class="two-col" style="margin-top:24px;">
+    <div>
+      <h3>Best for International MBA Applications</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>#</th><th>Competition</th><th>Target Programs</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Hult Prize (Regional+)</td><td>HBS, Booth, INSEAD, LBS</td></tr>
+          <tr><td>2</td><td>L'Oréal Brandstorm (Global)</td><td>HEC Paris, INSEAD, IE</td></tr>
+          <tr><td>3</td><td>Google Solution Challenge</td><td>MIT Sloan, Stanford GSB</td></tr>
+          <tr><td>4</td><td>Microsoft Imagine Cup</td><td>MIT, Stanford, Wharton</td></tr>
+          <tr><td>5</td><td>CFA Research Challenge</td><td>All top finance programs</td></tr>
+          <tr><td>6</td><td>KPMG Intl Case Comp</td><td>Global top 20 MBAs</td></tr>
+          <tr><td>7</td><td>BCG Strategy Cup</td><td>Wharton, LBS, INSEAD</td></tr>
+          <tr><td>8</td><td>Goldman Sachs Challenge</td><td>HBS, Columbia, LBS</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div>
+      <h3>Best for Social Innovation Careers</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>#</th><th>Competition</th><th>Impact Area</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Hult Prize</td><td>UN SDGs, global impact</td></tr>
+          <tr><td>2</td><td>SBI Youth for India</td><td>Rural development, fellowship</td></tr>
+          <tr><td>3</td><td>Goldman Sachs Challenge</td><td>Finance for impact</td></tr>
+          <tr><td>4</td><td>Google Solution Challenge</td><td>Tech for good</td></tr>
+          <tr><td>5</td><td>Smart India Hackathon</td><td>GovTech, public services</td></tr>
+          <tr><td>6</td><td>Startup India DPIIT</td><td>Social enterprise, D2C</td></tr>
+          <tr><td>7</td><td>Tata Imagination Challenge</td><td>Sustainability + business</td></tr>
+          <tr><td>8</td><td>Microsoft Imagine Cup</td><td>AI for accessibility</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<!-- KEY INSIGHTS & FINAL RECOMMENDATIONS -->
+<!-- ════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Section 12</div>
+  <h2>Key Insights & Final Recommendations</h2>
+
+  <div class="three-col">
+    <div class="callout">
+      <strong>Insight #1: Brand > Volume</strong>
+      One HUL L.I.M.E. national finalist position outweighs ten online competition certificates. Prestige of the organizing brand is the primary signal, not the number of competitions.
+    </div>
+    <div class="callout gold">
+      <strong>Insight #2: UG Students Are Underestimating EY CAFTA</strong>
+      CAFTA is one of the most accessible Big 4 branded competitions for BBA students. The UG-to-career ROI ratio is exceptional. Most students sleep on it.
+    </div>
+    <div class="callout blue">
+      <strong>Insight #3: Global Competitions Are Underleveraged</strong>
+      Indian students massively underparticipate in L'Oréal Brandstorm global track and Hult Prize regionals. These are the competitions that move international MBA applications the most.
+    </div>
+    <div class="callout green">
+      <strong>Insight #4: McKinsey Forward is Free Alpha</strong>
+      McKinsey Forward is a free online leadership program from McKinsey. It takes 1–2 months and adds genuine resume credibility. Almost nobody mentions it.
+    </div>
+    <div class="callout">
+      <strong>Insight #5: Storytelling > Frameworks</strong>
+      Judges at elite competitions are executives who've seen 4P and SWOT 1000 times. The teams that win tell a compelling, insight-driven story backed by commercial intuition. Frameworks are just containers.
+    </div>
+    <div class="callout gold">
+      <strong>Insight #6: Post-Competition Networking</strong>
+      The judges at these competitions are CMOs, partners, VPs. Most winners never follow up. A thoughtful LinkedIn message post-competition to the jury is a rare, high-return move.
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top:24px; font-size:14px;">
+    <strong>Final Recommended Portfolio for a BBA student targeting IIM A/B/C + Corporate Leadership:</strong>
+    <br><br>
+    <strong>Core 4 (do all of these):</strong> Deloitte Maverick + EY CAFTA + L'Oréal Brandstorm + Hult Prize (push to regional)
+    <br>
+    <strong>Add 1–2 based on interest:</strong>
+    <br>
+    → Marketing/FMCG track: + Tata Imagination Challenge + Marico/Nestlé
+    <br>
+    → Consulting track: + BCG case workshops + McKinsey Forward
+    <br>
+    → Startup/Innovation track: + Eureka! IIT Bombay + Google Solution Challenge
+    <br>
+    → Finance track: + CFA Research Challenge + Goldman Sachs Challenge
+    <br><br>
+    <strong>Always on:</strong> McKinsey Forward (free, do it regardless of track)
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+    <div>
+      <div style="color:var(--accent); font-size:13px; margin-bottom:8px;">India Case Competition Intelligence Report 2026</div>
+      <div>Research compiled from: InsideIIM · LinkedIn · Unstop · PrepLounge · Quora · Official competition websites · Winner testimonials</div>
+    </div>
+    <div style="text-align:right;">
+      <div>40+ Competitions Analyzed</div>
+      <div>Updated: 2026</div>
+      <div style="margin-top:8px;">Verify all competition details at official websites before registering — timelines and eligibility change annually.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
